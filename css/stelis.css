@@ -1,7 +1,7 @@
 body {
 font-family: "Outfit", sans-serif;
 
-background-image: url(//imagens/fundo-site.png);
+background-image: url(imagens/fundo-site.png);
 background-repeat: no-repeat;
 background-size: cover;
 min-height: 100vh;
@@ -46,6 +46,14 @@ position: relative;
     cursor: pointer;
     box-shadow: rgba(100, 100, 111, 0.3) 0px 7px 29px 0px;
     transition: background-color 0.2s ease-in-out    ;
+    -webkit-border-radius:50px ;
+    -moz-border-radius:50px ;
+    -ms-border-radius:50px ;
+    -o-border-radius:50px ;
+    -webkit-transition: background-color 0.2s ease-in-out    ;
+    -moz-transition: background-color 0.2s ease-in-out    ;
+    -ms-transition: background-color 0.2s ease-in-out    ;
+    -o-transition: background-color 0.2s ease-in-out    ;
 }
 
 .btn-seta:hover{
@@ -55,7 +63,11 @@ position: relative;
 
 .btn-seta.btn-voltar{
      transform: rotateY(180deg);
-    }
+     -webkit-transform: rotateY(180deg);
+     -moz-transform: rotateY(180deg);
+     -ms-transform: rotateY(180deg);
+     -o-transform: rotateY(180deg);
+}
 
 .cartao{
        background-color: blueviolet;
@@ -76,14 +88,14 @@ position: relative;
 }
 
 .fundo-1{
-background: url(/imagens/fundo-card-1.jpg) no-repeat;
+background: url(imagens/fundo-card-1.jpg) no-repeat;
 }
 .fundo-2{
-    background: url(/imagens/fundo-card-2.jpg) no-repeat;
+    background: url(imagens/fundo-card-2.jpg) no-repeat;
 }
 
 .fundo-3{
-    background: url(/imagens/fundo-card-3.jpg) no-repeat;
+    background: url(imagens/fundo-card-3.jpg) no-repeat;
 }
 
 .cartao .informacao{
