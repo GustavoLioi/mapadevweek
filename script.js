@@ -1,38 +1,32 @@
-const btnAvancar=document.getElementById("btn-avancar");
-const cartoes =document.querySelectorAll(".cartao");
-let cartaoAtual =0;
+const btnAvancar = document.getElementById("btn-avancar");
+const btnVoltar = document.getElementById("btn-voltar");
+const cartoes = document.querySelectorAll(".cartao");
+let cartaoAtual = 0;
 
-function esconderCartaoSelecionado(){
-
+function esconderCartaoSelecionado() {
+  const cartaoSelecionado = document.querySelector(".selecionado");
+  cartaoSelecionado.classList.remove("selecionado");
 }
 
+function mostrarCartao(indiceCartao) {
+  cartoes[indiceCartao].classList.add("selecionado");
+}
 
-btnAvancar.addEventListener("click",function(){
-if(cartaoAtual===cartoes.length - 1) return;
+btnAvancar.addEventListener("click", function () {
+  if (cartaoAtual === cartoes.length - 1) return;
 
-cartaoAtual++;
-cartoes[cartaoAtual].classList.add("selecionado");
+  esconderCartaoSelecionado();
 
-const cartaSelecionado = document.querySelector(".selecionado");
-cartaSelecionado.classList.remove("selecionado");
-
-
+  cartaoAtual++;
+  mostrarCartao(cartaoAtual);
 });
-//voltar
-btnVoltar.addEventListener("click",function(){
-if(cartaoAtual ===0) return;
 
-esconderCartaoSelecionado();
-const cartaSelecionado = document.querySelector(".selecionado");
+btnVoltar.addEventListener("click", function () {
+  if (cartaoAtual === 0) return;
 
-const btnAvancar=document.getElementById("btn-avancar");
+  esconderCartaoSelecionado();
 
-
-cartaoAtual--;
-cartoes[cartaoAtual].classList.add("selecionado");
-
-const cartaSelecionado = document.querySelector(".selecionado");
-cartaSelecionado.classList.remove("selecionado");
-
-
+  cartaoAtual--;
+  mostrarCartao(cartaoAtual);
 });
+
